@@ -1,0 +1,167 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --ff-primary: 'Poppins', sans-serif;
+  --text-color: #303030;
+  --hue: 194;
+  --primary-color: hsl(var(--hue), 100%, 63%);
+  --bt-hover: hsl(var(--hue), 100%, 40%);
+
+
+}
+
+body{
+
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: rgb(233, 228, 228);
+
+}
+
+
+body * {
+
+  font-family: var(--ff-primary);
+}
+
+
+.sr-only{
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border-width: 0;
+}
+
+
+#app{
+max-width: 500px;
+padding: 2rem;
+margin: 0 auto;
+
+}
+
+header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+margin: 2.5rem 0;
+
+}
+header h1{
+ font-size: 2rem;
+ text-transform: uppercase;
+}
+.search{
+
+display: flex;
+align-items: center;
+}
+
+.search input{
+
+height: 3.2rem;
+border: 1px solid #ccc;
+border-radius: 5px 0 0 5px;
+padding: 2px;
+
+}
+.search button{
+
+  height: 3.2rem;
+  border: 1px solid #ccc;
+  width: 30px;
+  border-radius: 0 .5rem .5rem 0;
+  background-color: var(--primary-color);
+
+}
+
+.search button:hover{
+  cursor: pointer;
+  background-color: var(--bt-hover);
+}
+
+table{
+width: 100%;
+border-collapse: collapse;
+box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3) ;
+}
+
+table *{
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+table th{
+  background: var(--primary-color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+table th:first-child{
+
+  border-top-left-radius: 0.4rem;
+}
+table th:last-child{
+
+  border-top-right-radius: .4rem;
+}
+/* pra pegar a linha impar */
+table tr:nth-child(odd)
+{
+  background: #bbb;
+}
+table tr:nth-child(even)
+{
+  background: #ddd;
+}
+
+
+table td{
+padding: 1.5rem;
+text-align: left;
+}
+
+td.user{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+td.user img{
+
+width: 5rem;
+height: 5rem;
+
+object-fit: cover;
+border-radius: 50%;
+
+}
+
+td.user a {
+text-decoration: none;
+}
+td.user a p{
+font-weight: bold;
+}
+td .remove{
+
+border: none;
+background: none;
+
+color:red;
+
+}
